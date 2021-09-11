@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hotel de mascotas: Formulario</title>
+</head>
+
+<body>
+    <header>
+        <h1>Formulario de reservas</h1>
+    </header>
+
+    <main>
+        <h2>Completá el siguiente formulario para realizar tu reserva:</h2>
+        <p>
+            Haciendo la reserva, ¡te regalaremos un kit de regalo para tu mascota!
+        </p>
+
+        <form action="/" method="POST">
+            <label for="nombre1" class="input-label">Nombre de la mascota:</label>
+            <input type="text" name="nombre1" id="nombre1" placeholder="Bobby" maxlength="24" minlength="2" />
+
+            <label class="input-label">Nombre y apellido del dueño:
+                <input type="text" id="nombre2" value="Juan Pérez" placeholder="Pepito Gómez" />
+            </label>
+
+            <label class="input-label">Password:
+                <input type="password" name="password" id="password" placeholder="Poné una clave que solo vos sepas." />
+            </label>
+
+            <br>
+            <br>
+
+            <textarea name="comentario" id="comentario" cols="30" rows="10"
+                placeholder="¿Cómo es tu mascota? ¡Contanos sobre ella!"></textarea>
+
+            <h3>Particularidades:</h3>
+
+            <label>
+                <input type="checkbox" name="sinpulgas" value="sinpulgas" checked />No
+                tiene pulgas
+            </label>
+
+            <label>
+                <input type="checkbox" name="comida" value="comida" />Come comida
+                especial
+            </label>
+
+            <label>
+                <input type="checkbox" name="pelota" value="pelota" disabled />Requiere de una pelota
+            </label>
+
+            <br>
+            <br>
+
+            <h3>Indicá cuál es su peso:</h3>
+
+            <label>
+                <input type="radio" name="peso" id="valor1" value="2-5" />2 a 5 kilos
+            </label>
+
+            <label>
+                <input type="radio" name="peso" id="valor2" value="5-10" />5 a 10
+                kilos
+            </label>
+
+            <label>
+                <input type="radio" name="peso" id="valor3" value="10-15" checked />10
+                a 15 kilos
+            </label>
+
+            <h3>¿Cuál es su comida favorita?</h3>
+
+            <select name="comida" id="comida">
+                <option value="croquetas">Croquetas</option>
+                <option value="golosinas">Golosinas</option>
+                <option value="comida para humanos">Comida para humanos</option>
+                <option value="barritas">Barritas</option>
+                <option value="carne">Carne</option>
+            </select>
+
+            <h3>¿Querés elegir alguna opción más?</h3>
+
+            <select name="comidas" id="comidas" multiple>
+                <option value="croquetas">Croquetas</option>
+                <option value="golosinas">Golosinas</option>
+                <option value="comida para humanos">Comida para humanos</option>
+                <option value="barritas">Barritas</option>
+                <option value="carne">Carne</option>
+            </select>
+
+            <h3>Subí una foto de tu mascota. ¡Nos encantaría conocerla!</h3>
+
+            <input type="file" name="fotito" id="foto" accept="image/*" />
+
+            <h3>Indicanos su edad aproximada:</h3>
+
+            <input type="date" name="date" id="date" />
+
+            <h3>
+                Ahora ya podés enviarnos tus datos para que te confirmemos la reserva.
+            </h3>
+
+            <input type="submit" name="submit" value="Enviar" />
+        </form>
+    </main>
+</body>
+
+</html>

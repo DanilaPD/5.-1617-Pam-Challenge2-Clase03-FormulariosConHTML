@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulario de inscripción a Hogwarts:</title>
+  </head>
+  <body>
+    <header>
+      <h1>¡Bienvenido a Hogwarts!</h1>
+    </header>
+
+    <main>
+      <h2>¡Completa el siguiente formulario y únete a la magia de esta asombrosa escuela!</h2>
+
+      <p>
+        Una vez que recibamos tus datos, te enviáremos una lista con los
+        materiales que necesitarás para convertirte en un verdadero mago
+      </p>
+
+      <form action="/" method="POST">
+        <label class="input-label"
+          >Nombre:
+          <input
+            type="text"
+            name="nombre"
+            id="nombre"
+            placeholder="Harry"
+            value="Hermione"
+            maxlength="24"
+            minlength="2"
+          />
+        </label>
+
+        <label class="input-label"
+          >Apellido:
+          <input
+            type="text"
+            name="apellido"
+            id="apellido"
+            placeholder="Potter"
+            value="Granger"
+            maxlength="24"
+            minlength="2"
+          />
+        </label>
+
+        <label class="input-label"
+          >Password mágica:
+          <input
+            type="password"
+            name="password"
+            id="password"
+            placeholder="Inserta tu clave mágica"
+            maxlength="24"
+            minlength="2"
+          />
+        </label>
+
+        <br />
+        <br />
+
+        <textarea
+          name="comentario"
+          id="comentario"
+          cols="30"
+          rows="10"
+          placeholder="¡Cuéntanos un poquito más sobre ti! ¿Cuál es tu hechizo favorito?"
+        ></textarea>
+
+        <h3>
+          Nuestros alumnos tienen prohibído hacer hechizos delante de un muggle.
+          ¿Crees que podrías respetar esa norma?
+        </h3>
+
+        <label> <input type="checkbox" name="si" value="si" />Sí </label>
+
+        <label> <input type="checkbox" name="no" value="no" />No </label>
+
+        <br />
+        <br />
+
+        <h3>¿Cuántos hechizos conoces?</h3>
+
+        <label>
+          <input type="radio" name="hechizos" id="valor1" value="5" />5
+        </label>
+
+        <label>
+          <input type="radio" name="hechizos" id="valor2" value="10" />10
+        </label>
+
+        <label>
+          <input type="radio" name="hechizos" id="valor3" value="15" />15
+        </label>
+
+        <h3>
+          Antes de que te enfrentes a nuestro asombroso sombrero seleccionador,
+          cuéntanos cuál es tu casa favorita:
+        </h3>
+
+        <select name="casa" id="casa">
+          <option value="gryffindor">Gryffindor</option>
+          <option value="slytherin">Slytherin</option>
+          <option value="hufflepuff">Hufflepuff</option>
+          <option value="ravenclaw">Ravenclaw</option>
+        </select>
+
+        <h3>¿Quieres elegir alguna casa más?</h3>
+
+        <select name="casas" id="casas" multiple>
+          <option value="gryffindor">Gryffindor</option>
+          <option value="slytherin">Slytherin</option>
+          <option value="hufflepuff">Hufflepuff</option>
+          <option value="ravenclaw">Ravenclaw</option>
+        </select>
+
+        <h3>Sube una foto de tu varita:</h3>
+
+        <input type="file" name="fotito" id="foto" accept="image/*" />
+
+        <h3>Cuéntanos cuándo es tu cumpleaños:</h3>
+
+        <input type="date" name="date" id="date" />
+
+        <h3>Listo, ¡ya puedes enviarnos tus datos!</h3>
+
+        <input type="submit" name="submit" value="Enviar" />
+      </form>
+    </main>
+  </body>
+</html>
